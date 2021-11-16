@@ -1,0 +1,22 @@
+name: Docker Publish
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+jobs:
+  build1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build image
+        run: docker build . -o out
+        working-directory: src/Super.Library
+
+      - name: Archive nupkg
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-artifact
+          path: out/*.nupkg
