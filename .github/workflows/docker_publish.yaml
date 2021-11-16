@@ -14,8 +14,7 @@ jobs:
         working-directory: src/Super.Library
 
       - name: List artifacts
-        run: ls -lh
-        working-directory: src/Super.Library
+        run: ls -lhR
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
