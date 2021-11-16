@@ -13,8 +13,8 @@ jobs:
         run: docker build . -o out
         working-directory: src/Super.Library
 
-      - name: Upload Artifacts
+      - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: test-artifact
-          path: **/out/*.nupkg
+          path: '**/out/*.nupkg'
