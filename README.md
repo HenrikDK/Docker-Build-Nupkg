@@ -31,6 +31,8 @@ This will place the .nupkg in a sub folder inside the project.
 ## Sources
 With inspiration from: 
 
+https://reece.tech/posts/extracting-files-multi-stage-docker/
+
 https://alexei-led.github.io/post/docker_builder_pattern/
 
 https://github.com/dotnet/sdk/issues/10335
